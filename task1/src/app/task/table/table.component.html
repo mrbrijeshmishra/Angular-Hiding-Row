@@ -1,0 +1,30 @@
+<br> <br>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Country</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let item of employeez; let i = index;">
+        <ng-container *ngIf="item.visibility">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.country}}</td>
+            <!-- <td>
+                <button (click)="deleteEmployee(i)">Delete</button>
+            </td> -->
+            <td>
+                <button (click)="toggleTag(i)" >
+                    Delete
+                </button>
+            </td>
+        </ng-container>
+    </tr>
+</table>
